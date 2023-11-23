@@ -224,7 +224,7 @@ padding-left: 40px;
      <property name="font">
       <font>
        <family>Semakin</family>
-       <pointsize>36</pointsize>
+       <pointsize>28</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -465,6 +465,9 @@ QPushButton:hover{
        <family>Poppins Medium</family>
        <pointsize>11</pointsize>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color:#fdfdfe;
