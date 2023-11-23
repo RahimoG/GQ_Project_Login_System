@@ -11,14 +11,17 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    recupertionform.cpp \
     registerform.cpp
 
 HEADERS += \
     mainwindow.h \
+    recupertionform.h \
     registerform.h
 
 FORMS += \
     mainwindow.ui \
+    recupertionform.ui \
     registerform.ui
 
 # Default rules for deployment.
