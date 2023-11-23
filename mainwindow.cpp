@@ -90,8 +90,9 @@ void MainWindow::on_toolButton_2_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QWidget *register_wdg = new QWidget;
-    register_wdg->show();
+    hide();
+    registerForm = new RegisterForm(this);
+    registerForm->show();
 
 }
 

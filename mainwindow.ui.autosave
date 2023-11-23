@@ -224,7 +224,7 @@ padding-left: 40px;
      <property name="font">
       <font>
        <family>Semakin</family>
-       <pointsize>36</pointsize>
+       <pointsize>28</pointsize>
       </font>
      </property>
      <property name="styleSheet">
