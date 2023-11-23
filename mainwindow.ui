@@ -386,7 +386,7 @@ QPushButton:hover{
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #09111d;</string>
+      <string notr="true">color: rgba(9,17,29,200);</string>
      </property>
      <property name="text">
       <string>Remember me</string>
