@@ -4,6 +4,11 @@
 #include <QMainWindow>
 #include "registerform.h"
 #include "recupertionform.h"
+#include <QMainWindow>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QMessageBox>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,9 +34,11 @@ private slots:
 
     void on_pushButton_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     RegisterForm *registerForm;
     RecupertionForm *recuperationForm;
+    QSqlDatabase database;
 };
 #endif // MAINWINDOW_H

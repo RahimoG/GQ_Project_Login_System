@@ -3,6 +3,10 @@
 
 #include <QDialog>
 #include "registerform.h"
+#include <QMainWindow>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QMessageBox>
 
 namespace Ui {
 class RecupertionForm;
@@ -22,6 +26,7 @@ private slots:
 private:
     Ui::RecupertionForm *ui;
     RegisterForm *registerForm;
+    QSqlDatabase database;
 };
 
 #endif // RECUPERTIONFORM_H

@@ -20,6 +20,8 @@ Personne p1 = initialisation("rahimo","rah27","wadoudbirouk9@gmail.com");
 
 
 /// MAIN PROGRAMME
+///
+bool eyeShow = false;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -65,9 +67,16 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_lineEdit_3_textChanged()
 {
-    ui->toolButton->show();
+    if(!eyeShow)
+    {
+        ui->toolButton->show();
+        eyeShow = false;
+    }
+    else {
+        ui->toolButton_2->show();
+        eyeShow = true;
+    }
 }
-
 
 
 
@@ -76,6 +85,7 @@ void MainWindow::on_toolButton_clicked()
     ui->lineEdit_3->setEchoMode(QLineEdit::Normal);
     ui->toolButton->hide();
     ui->toolButton_2->show();
+    eyeShow = true;
 }
 
 
@@ -84,7 +94,7 @@ void MainWindow::on_toolButton_2_clicked()
     ui->lineEdit_3->setEchoMode(QLineEdit::Password);
     ui->toolButton->show();
     ui->toolButton_2->hide();
-
+    eyeShow = false;
 }
 
 
@@ -103,4 +113,5 @@ void MainWindow::on_pushButton_clicked()
     recuperationForm = new RecupertionForm(this);
     recuperationForm->show();
 }
+
 
