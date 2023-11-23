@@ -247,7 +247,7 @@ color : #14427c;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../assets/atomic_ICONS_DarckedArtboard 11.png</pixmap>
+      <pixmap>../assets/atomic_ICONS_blueOnlyArtboard 15.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -302,7 +302,7 @@ padding-left: 40px;
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../assets/atomic_ICONS_DarckedArtboard 12.png</pixmap>
+      <pixmap>../assets/atomic_ICONS_blueOnlyArtboard 16.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -409,7 +409,7 @@ QPushButton:hover{
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../assets/atomic_ICONS_DarckedArtboard 9.png</normaloff>../assets/atomic_ICONS_DarckedArtboard 9.png</iconset>
+       <normaloff>../assets/atomic_ICONS_blueOnlyArtboard 13.png</normaloff>../assets/atomic_ICONS_blueOnlyArtboard 13.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -435,7 +435,7 @@ QPushButton:hover{
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../assets/atomic_ICONS_DarckedArtboard 10.png</normaloff>../assets/atomic_ICONS_DarckedArtboard 10.png</iconset>
+       <normaloff>../assets/atomic_ICONS_blueOnlyArtboard 14.png</normaloff>../assets/atomic_ICONS_blueOnlyArtboard 14.png</iconset>
      </property>
      <property name="iconSize">
       <size>
