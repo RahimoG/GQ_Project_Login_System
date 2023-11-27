@@ -1,6 +1,23 @@
 #include "registerform.h"
 #include "ui_registerform.h"
 #include "mainwindow.h"
+// MY DB :
+
+
+const int DB_SIZE = 100;
+extern int nextTuple;
+extern QString fName[DB_SIZE];
+extern QString Email[DB_SIZE];
+extern QString Uname[DB_SIZE];
+extern QString Pass[DB_SIZE];
+
+
+
+
+//
+
+
+
 
 bool eyeShowR = false;
 RegisterForm::RegisterForm(QWidget *parent) :
@@ -27,24 +44,64 @@ void RegisterForm::on_pushButton_2_clicked()
 
 void RegisterForm::on_pushButton_3_clicked()
 {
-    qDebug() << QSqlDatabase::drivers();
-    // ADDING TUPELES TO THE DB:
-    //Connection to DB:
-    database = QSqlDatabase::addDatabase("QMYSQL");
-    database.setHostName("loclhost");
-    database.setUserName("root");
-    database.setPassword("");
-    database.setDatabaseName("qt_login_system");
-
-    //connection check:
-    if(database.open()){
-        // recicing data from formular:
-        QMessageBox::information(this, "Not connected","connection to db");
-
+    ui->lineEdit->setStyleSheet("color: #dd4a4a");
+    bool done = true;
+    if(ui->lineEdit_5->text() == ""){
+        ui->lineEdit_5->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+        ui->lineEdit->setText("Warning : Email is requaried.");
+        done = false;
     }else{
-        QMessageBox::information(this, "Not connected","No connection to db");
+        ui->lineEdit_5->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #c4ccce; padding-left: 40px;");
+        for(int i=0; i<nextTuple;i++)
+        {
+            if (Email[i] == ui->lineEdit_5->text()){
+                ui->lineEdit_2->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+                ui->lineEdit->setText("Warning : This Email is used before.");
+                done = false;
+            }
+        }
     }
-
+    if(ui->lineEdit_4->text() == ""){
+        ui->lineEdit_4->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+        ui->lineEdit->setText("Warning : Full Name is requaried.");
+        done = false;
+    }else{
+        ui->lineEdit_4->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #c4ccce; padding-left: 40px;");
+    }
+    if(ui->lineEdit_3->text() == ""){
+        ui->lineEdit_3->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+        ui->lineEdit->setText("Warning : Password is requaried.");
+        done = false;
+    }else{
+        ui->lineEdit_3->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #c4ccce; padding-left: 40px;");
+    }
+    if(ui->lineEdit_2->text() == ""){
+        ui->lineEdit_2->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+        ui->lineEdit->setText("Warning : Username is requaried.");
+        done = false;
+    }else{
+        ui->lineEdit_2->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #c4ccce; padding-left: 40px;");
+        for(int i=0; i<nextTuple;i++)
+        {
+            if (Uname[i] == ui->lineEdit_2->text()){
+                ui->lineEdit_2->setStyleSheet("color: #09111d;border-radius: 10px; background-color: #dbcacc; padding-left: 40px;");
+                ui->lineEdit->setText("Warning : This username is used before.");
+                done = false;
+            }
+        }
+    }
+    if(done){
+        ui->lineEdit->setStyleSheet("color: #41af5d;");
+        ui->lineEdit->setText("Account created Succesfully.");
+        if(nextTuple<DB_SIZE)
+        {
+            fName[nextTuple] = ui->lineEdit_4->text();
+            Uname[nextTuple] = ui->lineEdit_2->text();
+            Email[nextTuple] = ui->lineEdit_5->text();
+            Pass[nextTuple] = ui->lineEdit_3->text();
+            nextTuple++;
+        }
+    }
 }
 
 

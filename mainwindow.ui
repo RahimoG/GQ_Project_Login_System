@@ -38,7 +38,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../assets/atomic_login_iconArtboard 7.png</normaloff>../assets/atomic_login_iconArtboard 7.png</iconset>
+    <normaloff>../assets/Artboard 5.png</normaloff>../assets/Artboard 5.png</iconset>
   </property>
   <property name="accessibleName">
    <string/>
@@ -50,6 +50,13 @@ QPushButton
 {
 	background-color:rgb(255, 255, 255);
 	border: 2px solid rgb(0, 0, 127);
+}
+QMessageBox{
+	background: #fdfdfe;
+
+}
+QMessageLabel{
+	background: none;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -60,7 +67,7 @@ QPushButton
     <property name="geometry">
      <rect>
       <x>329</x>
-      <y>80</y>
+      <y>90</y>
       <width>421</width>
       <height>521</height>
      </rect>
@@ -175,9 +182,12 @@ QPushButton:hover {
 QPushButton:hover {
 	background-color: #3667b0;
 	color : #fdfdfe;
-};
+}
 
-</string>
+QPushButton::pressed {
+    background-color:rgb(79, 149, 255);
+   
+}</string>
      </property>
      <property name="text">
       <string>LOGIN</string>

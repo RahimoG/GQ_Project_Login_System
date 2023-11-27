@@ -38,7 +38,7 @@ QPushButton
    </property>
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>174</x>
      <y>90</y>
      <width>731</width>
      <height>521</height>
@@ -154,8 +154,11 @@ QPushButton:hover {
 QPushButton:hover {
 	background-color: #3667b0;
 	color : #fdfdfe;
-};
-
+}
+QPushButton::pressed {
+    background-color:rgb(79, 149, 255);
+   
+}
 </string>
     </property>
     <property name="text">
